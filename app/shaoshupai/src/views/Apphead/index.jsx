@@ -9,8 +9,8 @@ import "./apphead.scss";
 import imgLogo from "../../assets/shaoshupai.png";
 import yipaiLogo from "../../assets/yipaicontent.png";
 // 引入组件
-import SearchBox from '../../components/Apphead-searchBox/index.jsx';
-import Navtion from '../../components/Apphead-Navtion/index.jsx';
+import SearchBox from '../../components/Apphead-searchBox';
+import Navtion from '../../components/Apphead-Navtion';
 
 function Apphead(props) {
     const [nav, navChange] = useState(false);

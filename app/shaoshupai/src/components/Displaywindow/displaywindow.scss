@@ -1,2 +1,15 @@
 @import "../../assets/vm.scss";
 
+.space-carousel {
+    width: 100%;
+    padding:0 vm(10);
+    overflow: hidden;
+    max-width: vm(1120);
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    .slider-list{
+        height: vm(110) !important;
+        // transform: translate3d(-0.75px, 0px, 0px) !important;
+    }
+  }

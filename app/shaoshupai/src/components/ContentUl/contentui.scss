@@ -1,0 +1,50 @@
+@import "../../assets/vm.scss";
+
+.content-box::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+.content-box{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    transition: opacity .5s;
+    min-height: vm(48);
+    
+    .content-ul{
+        width: vm(550);
+        transition-duration: 0ms;
+        padding: 0 12px;
+        margin-left: 0;
+        position: relative;
+        height: 100%;
+        z-index: 1;
+        .content-item-active{
+            color: #d71a1b;
+            font-weight: 500;
+            border-bottom: 2px solid #d71a1b;
+        }
+        li{
+            float: left;
+            padding: 0 14px;
+            width: auto;
+            color: #8e8787;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            margin: 0;
+            margin-right: 10px;
+            min-height: vm(48);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            line-height: 48px;
+            white-space: nowrap;
+        }
+    }
+}

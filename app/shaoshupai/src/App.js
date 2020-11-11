@@ -1,11 +1,11 @@
 import React from 'react';
 import { Redirect, Switch, Route, withRouter } from 'react-router-dom';
 
-import Apphead from './views/Apphead/index.jsx';
-import Appbody from './views/Appbody/index.jsx';
-import Matrix from './views/matrix/index.jsx';
-import Yipai from './views/yipai/index.jsx';
-import ProjectSelection from './views/projectSelection/index.jsx';
+import Apphead from './views/Apphead';
+import Appbody from './views/Appbody';
+import Matrix from './views/matrix';
+import Yipai from './views/yipai';
+import ProjectSelection from './views/projectSelection';
 
 import 'antd-mobile/dist/antd-mobile.css';
 import './App.scss';

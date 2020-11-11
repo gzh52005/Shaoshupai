@@ -14,9 +14,13 @@ class Slideshow extends React.Component {
             });
         }, 100);
     }
+    componentWillUnmount() {
+        clearInterval()
+    }
     render() {
         return (
-            <WingBlank style={{ margin: 0 }}>
+            <WingBlank style={{ margin: 0 }
+            }>
                 <Carousel
                     autoplay={true}
                     infinite={true}
@@ -26,12 +30,12 @@ class Slideshow extends React.Component {
                     {this.state.data.map(val => (
                         <a
                             key={val}
-                            style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight, zIndex: 1000000 }}
+                            style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight, zIndex: 10000 }}
                         >
                             <img
                                 src={val}
                                 alt=""
-                                style={{ width: '100%', verticalAlign: 'top' }}
+                                style={{ width: '100%', verticalAlign: 'top' ,touchAction: 'none'}}
                                 onLoad={() => {
                                     // fire window resize event to change height
                                     window.dispatchEvent(new Event('resize'));
@@ -40,7 +44,7 @@ class Slideshow extends React.Component {
                         </a>
                     ))}
                 </Carousel>
-            </WingBlank>
+            </WingBlank >
         );
     }
 }
