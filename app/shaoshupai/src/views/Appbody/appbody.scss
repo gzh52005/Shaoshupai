@@ -1,0 +1,12 @@
+@import "../../assets/vm.scss";
+
+.appbody{
+    width: 100%;
+    height: vm(800);
+    position: absolute;
+    top: vm(50);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: pink;
+}

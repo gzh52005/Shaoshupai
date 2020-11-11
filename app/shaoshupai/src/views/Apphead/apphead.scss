@@ -1,0 +1,37 @@
+@import "../../assets/vm.scss";
+
+.appheader{
+    background: pink;
+    width: 100%;
+    height: vm(50);
+    background: #292525;
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    .appheader-box{
+        height: 100%;
+    }
+    .appheader-nav{
+        height: vm(50);
+        background: #292525;
+        padding: 0;
+        img{
+            padding: 0;
+            position: absolute;
+            top: vm(15);
+            left: vm(10);
+
+        }
+    }
+    .appheader-userbox{
+        line-height: vm(32);
+        height: vm(50);
+        position: absolute;
+        right: 10px;
+        top: 22%;
+
+    }
+}
