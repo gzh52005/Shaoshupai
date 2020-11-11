@@ -15,9 +15,10 @@ function App(props) {
   return (
     <div className="App">
 
-      {
-        props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' ? null : <Apphead />
-      }
+      {/* {
+        props.location.pathname === '/login' || props.location.pathname === '/projectselection' ? null : <Apphead />
+      } */}
+      <Apphead />
 
       <div style={{ paddingBottom: '516px' }}>
         <div>
