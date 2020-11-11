@@ -15,11 +15,8 @@ import Navtion from '../../components/Apphead-Navtion';
 function Apphead(props) {
     const [nav, navChange] = useState(false);
     const [find, findChange] = useState(false);
-    
-    console.log("Apphead=",props);
 
     const appheader = props.location.pathname === '/yipai' || props.location.pathname === '/matrix' ? "appheader_white" : "appheader";
-    console.log(appheader);
 
     return (
         <header className={appheader}>
