@@ -11,7 +11,6 @@ import 'antd-mobile/dist/antd-mobile.css';
 import './App.scss';
 
 function App(props) {
-  console.log(props)
   return (
     <div className="App">
 
