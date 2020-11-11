@@ -11,14 +11,11 @@ import 'antd-mobile/dist/antd-mobile.css';
 import './App.scss';
 
 function App(props) {
-  console.log(props)
   return (
     <div className="App">
-
       {
         props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' ? null : <Apphead />
       }
-
       <div style={{ paddingBottom: '516px' }}>
         <div>
           <Switch>
