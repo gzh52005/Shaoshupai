@@ -1,0 +1,86 @@
+@import "../../assets/vm.scss";
+
+.news-content-box{
+    .news-content-list{
+        margin-bottom: vm(12);
+        display: flex;
+        width: 100%;
+        max-width: vm(800);
+        padding: vm(20);
+        background: #fff;
+        flex-flow: column;
+        .pai-title{
+            display: flex;
+            height: vm(60);
+            margin: 0;
+            flex-flow: row;
+            justify-content: space-between;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            .title{
+                width: auto;
+                margin-top: vm(10);
+                font-size: vm(24);
+                line-height: vm(34);
+                letter-spacing: .1em;
+                color: #292525;
+            }
+            .days{
+                width: auto;
+                margin-top: vm(13);
+                font-size: vm(10);
+                line-height: vm(14);
+                letter-spacing: .1em;
+                color: #655e5e;
+                .now-time{
+                    margin-bottom: vm(8);
+                }
+            }
+        }
+        .pai-cotent{
+            width: 100%;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            .pai-cotent-item-box{
+                display: flex;
+                flex-flow: column;
+                width: 100%;
+                padding: 0 10px;
+                .pai-cotent-item+.pai-cotent-item{
+                    border-top: 1px solid #e5e5e5;
+                }
+                .pai-cotent-item{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: vm(13) vm(27) vm(10) vm(20);
+                    margin: 0;
+                    .pai-cotent-item-num{
+                        font-size: vm(18);
+                        line-height: vm(25);
+                        color: #d71a1b;
+                    }
+                    .pai-cotent-item-text{
+                        margin-left: vm(23);
+                        font-size: vm(14);
+                        line-height: vm(20);
+                        letter-spacing: .1em;
+                        color: #292525;
+                    }
+                }
+            }
+        }
+        .pai-link{
+            width: vm(98);
+            height: vm(36);
+            line-height: vm(36);
+            border-radius: vm(28);
+            margin: vm(20) auto;
+            text-align: center;
+            background: linear-gradient(0deg,#f4f4f4,#f4f4f4);
+        }
+    }
+}
