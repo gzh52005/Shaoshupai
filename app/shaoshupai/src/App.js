@@ -32,9 +32,9 @@ function App(props) {
     <div className="App">
 
       {
-        props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' || props.location.pathname === '/login' || props.location.pathname === '/reg' ? null : <Apphead />
+          props.location.pathname === '/login' || props.location.pathname === '/reg' ? null : <Apphead />
       }
-
+        <div>
           <Switch>
             <Route path='/home' component={Appbody} />
             <Route path='/matrix' component={Matrix} />
@@ -47,6 +47,7 @@ function App(props) {
             <Redirect from='/' to='/home' exact />
             <Redirect to='/notfound' />
           </Switch>
+        </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ function Yipai(props){
     let [btn2,changeBtn2] = useState(false)
 
     return( 
-        <div>
+        <div className="yipai">
             <div className="ypHead">
                 <div className="square">
                     <img src={yipaiLogo} alt=""/>

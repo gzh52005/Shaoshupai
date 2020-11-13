@@ -28,11 +28,7 @@ function Apphead(props) {
                             <img src={imgLogo}
                                 alt="" style={{ height: 24, }} onClick={() => { props.history.push('/home') }} />
                             {
-<<<<<<< HEAD
-                                props.location.pathname === '/yipai' ? <img src={yipaiLogo} style={{ height: 26, left: 50 }} /> : null
-=======
                                 props.location.pathname === '/yipai' || props.location.pathname === "/ypdetail" ? <img src={yipaiLogo} style={{height:26,left:50}} /> : null
->>>>>>> sunchao
                             }
                             {
                                 props.location.pathname === '/matrix' ? <CodeSandboxOutlined style={{ color: "#000", fontSize: 24, marginLeft: 36 }} /> : null
@@ -42,13 +38,8 @@ function Apphead(props) {
                     }
                     rightContent={
                         <div className="appheader-userbox">
-<<<<<<< HEAD
-                            <SearchOutlined onClick={() => { findChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix' ? { marginRight: '20px', color: "#333" } : { marginRight: '20px', color: "#fff" }} />
-                            <MenuOutlined onClick={() => { navChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix' ? { marginRight: '20px', color: "#333" } : { marginRight: '20px', color: "#fff" }} />
-=======
                             <SearchOutlined onClick={() => { findChange(!find && !nav) }} style={appheader?{ marginRight: '20px', color:"#333"}:{ marginRight: '20px', color:"#fff"}} />
                             <MenuOutlined onClick={() => { navChange(!find && !nav) }} style={appheader?{ marginRight: '20px', color:"#333"}:{ marginRight: '20px', color:"#fff"}} />
->>>>>>> sunchao
                             <Button
                                 size="small"
                                 style={{ float: 'right', borderRadius: "24px", padding: '5px 12px', background: '#f5f5f5', color: '#655e5e', fontSize: '14px', lineHeight: '20px' }}

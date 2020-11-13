@@ -1,36 +1,39 @@
 @import "../../assets/vm.scss";
 @import "../../assets/base.css";
 
-.ypHead{
-    width: 100%;
-    height: vm(156);
-    background: #fff;
-    padding:vm(24);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .square{
-        height: vm(48);
-        img{
-            height: vm(48);
-            margin-right: vm(10);
-            float: left;
-        }
-        span{
-            font-size: vm(22);
-            line-height: vm(46);
-            float: left;
-        }
-    }
-    .ypNav{
+.yipai{
+    margin-top: vm(50);
+    .ypHead{
+        width: 100%;
+        height: vm(156);
+        background: #fff;
+        padding:vm(24);
         display: flex;
-        .btnActive{
-            background:#292525;
-            color: #fff;
+        flex-direction: column;
+        justify-content: space-between;
+        .square{
+            height: vm(48);
+            img{
+                height: vm(48);
+                margin-right: vm(10);
+                float: left;
+            }
+            span{
+                font-size: vm(22);
+                line-height: vm(46);
+                float: left;
+            }
+        }
+        .ypNav{
+            display: flex;
+            .btnActive{
+                background:#292525;
+                color: #fff;
+            }
         }
     }
-}
-.yqMain{
-    width: 100%;
-    padding: 0 vm(8);
+    .yqMain{
+        width: 100%;
+        padding: 0 vm(8);
+    }
 }
