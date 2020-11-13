@@ -16,15 +16,17 @@
     min-height: vm(48);
     
     .content-ul{
-        width: vm(550);
+        width: vm(470);
         transition-duration: 0ms;
         padding: 0 12px;
         margin-left: 0;
         position: relative;
-        height: 100%;
-        z-index: 1;
+        // transform: translate3d(-0.75px, 0px, 0px) !important;
+        // height: 100%;
+        z-index: 9999;
+        background:#f4f4f4;
         .content-item-active{
-            color: #d71a1b;
+            color: #d71a1b ;
             font-weight: 500;
             border-bottom: 2px solid #d71a1b;
         }

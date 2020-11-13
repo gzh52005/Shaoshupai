@@ -23,7 +23,6 @@ function App(props) {
       }
 
       <div>
-        <div>
           <Switch>
             <Route path='/home' component={Appbody} />
             <Route path='/matrix' component={Matrix} />
@@ -35,7 +34,6 @@ function App(props) {
             <Redirect from='/' to='/home' exact />
             <Redirect to='/notfound' />
           </Switch>
-        </div>
       </div>
     </div>
   );
