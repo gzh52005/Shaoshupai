@@ -1,0 +1,198 @@
+@import "../../assets/vm.scss";
+
+
+.SquareBox{
+    width:100%;
+    padding:0 vm(16);
+    background:rgb(255, 255, 255);
+    .title{
+        width:100%;
+        height:vm(57);
+        // background:rgb(64, 241, 227);
+        line-height:vm(57);
+        border-bottom:vm(1) solid #e5e5e5;
+        .title_left{
+            width:vm(90);
+            height:vm(57);
+            // background:brown;
+            span{
+                font-size:vm(16);
+                color:#8E8787;
+                margin-right:vm(5);
+            }
+        }
+        
+    }
+    .showBox{
+        width:100%;
+        margin-top:vm(18);
+        
+    }
+    .loading_btn{
+        color: #655e5e;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        width: 136px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 40px;
+        background: #f7f7f8;
+        margin: 36px auto;
+    }
+    .yipai_content{
+        width:100%;
+        margin-top:vm(80);
+        // 一派 说一说
+        .yipai_tell{
+            width:100%;
+            height:vm(428);
+            // background:pink;
+            .yipai_tell_header{
+                width:vm(91);
+                height:vm(40);
+                margin:0 auto;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .yipai_tell_footer{
+                width:100%;
+                height:vm(296);
+                background:#f7f7f8;
+                margin-top:vm(90);
+                border-radius:vm(16);
+                .imgbox{
+                    width:vm(287);
+                    height:vm(182);
+                    margin:0 auto;
+                    border-radius:vm(40);
+                    position:relative;
+                    top:vm(-60);
+                    img{
+                        width:100%;
+                        height:100%;
+                        border-radius:vm(20);
+                    }
+                    p{
+                        font-size:vm(14);
+                        color:#292525;
+                        margin-top:vm(18);
+                    }
+                }
+                .speak-btn{
+                    width:vm(124);
+                    height:vm(40);
+                    background:#292525;
+                    border-radius:vm(20);
+                    margin:0 auto;
+                    color:#fff;
+                    font-size:vm(14);
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+                .more{
+                    // display:flex;
+                    // justify-content:center;
+                    // align-items:center;
+                    font-size:vm(12);
+                    color:#655E5E;
+                    text-align:center;
+                    margin-top:vm(30);
+                }
+            }
+        }
+        // 值得关注
+        .yipai_focus{
+            width:100%;
+            height:vm(391);
+            background:#f7f7f8;
+            margin-top:vm(28);
+            border-radius:vm(16);
+            padding: 24px 28px 28px;
+            h2{
+                font-weight: 600;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            .yipai_focus_cbox{
+                width:100%;
+                .yipai_focus_c{
+                    display:flex;
+                    margin-bottom:vm(24);
+                    img{
+                        width:vm(48);
+                        height:vm(48);
+                        border-radius:vm(24);
+                        margin-right:vm(10);
+                        flex-shrink: 0
+                    }
+                    .yipai_focus_c_right{
+                        display:flex;
+                        flex-direction:column;
+                        span:nth-child(1){
+                            font-size:vm(14);
+                            color:#292525;
+                            margin-bottom:vm(10);
+                        }
+                        span:nth-child(2){
+                            font-size:vm(14);
+                            color:#655e5e;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        //专栏推荐
+        .yipai_column{
+            width:100%;
+            height:vm(363);
+            background:#f7f7f8;
+            margin-top:vm(28);
+            border-radius:vm(16);
+            padding: 24px 28px 28px;
+            h2{
+                font-weight: 600;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            .yipai_column_cbox{
+                width:100%;
+                .yipai_column_c{
+                    display:flex;
+                    margin-bottom:vm(24);
+                    img{
+                        width:vm(60);
+                        height:vm(60);
+                        border-radius:vm(10);
+                        margin-right:vm(10);
+                    }
+                    .yipai_column_c_right{
+                        display:flex;
+                        flex-direction:column;
+                        span:nth-child(1){
+                            font-size:vm(14);
+                            color:#292525;
+                            margin-bottom:vm(10);
+                        }
+                        span:nth-child(2){
+                            font-size:vm(14);
+                            color:#655e5e;
+                        }
+                    }
+                    
+                }
+            }
+            .more{
+                font-size:vm(12);
+                color:#655E5E;
+                text-align:center;
+                margin-top:vm(30);
+            }
+        }
+    }
+}
