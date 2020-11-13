@@ -1,0 +1,64 @@
+@import "../../assets/vm.scss";
+
+.active{
+    border-bottom:vm(1) solid #292525;
+}
+
+
+.matrixBox{
+    padding-top:vm(50);
+    background:#fff;
+    .matri_headerBox{
+        width:100%;
+        height:vm(144);
+        background:linear-gradient(180deg,transparent,rgba(0,0,0,.03));
+        padding:0 vm(16);
+        margin-bottom:vm(14);
+        .top{
+            width:100%;
+            height:vm(100);
+            // background:orange;
+            margin-bottom:vm(8);
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            p{
+                font-size:vm(26);
+                color:#000;
+                font-weight:600;
+            }
+            .top_right{
+                width:vm(98);
+                height:vm(35);
+                background:#408cff;
+                color:#fff;
+                font-size:vm(14);
+                // text-align: center;
+                // line-height:vm(35);
+                border-radius:vm(17);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                span:nth-child(1){
+                    font-size:vm(20);
+                    margin-right:vm(5);
+                }
+            }
+        }
+        .bottom{
+            width:100%;
+            height:vm(36);
+            // background:yellow;
+            line-height:vm(36);
+            li{
+                width:vm(56);
+                height:vm(36);
+                float:left;
+                margin-right:vm(16);
+                font-size:vm(14);
+                color:#292525;
+                text-align:center;
+            }
+        }
+    }
+}
