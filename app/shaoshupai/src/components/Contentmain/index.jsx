@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import "./contentmain.scss";
 
 function Contentmain(props) {
+    console.log(props);
+
     return (
         <div className="content-main-box">
             <div className="content-main-text">
                 <div className="content-main-imgBox">
                     <a style={{ display: "inline-block", width: '100%' }}>
-                        <div className="card_img" style={{ background: "linear-gradient(180deg,transparent,#000),url('https://cdn.sspai.com/2020/11/12/13abab5ffc5467464714ce99454cf3f0.jpg?imageMogr2/auto-orient/quality/95/thumbnail/!800x400r/gravity/Center/crop/800x400/interlace/1')",backgroundSize: '100%' }}></div>
+                        <div className="card_img" style={{ background: "linear-gradient(180deg,transparent,#000),url('https://cdn.sspai.com/2020/11/12/13abab5ffc5467464714ce99454cf3f0.jpg?imageMogr2/auto-orient/quality/95/thumbnail/!800x400r/gravity/Center/crop/800x400/interlace/1')", backgroundSize: '100%' }}></div>
                     </a>
                 </div>
                 <div className="content-main-title">

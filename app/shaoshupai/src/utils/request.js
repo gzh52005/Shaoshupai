@@ -1,6 +1,6 @@
 export function request(url, data, options = {}) {
     if (options.method === 'get' || options.method === undefined) {
-        if (data) {
+        if (JSON.stringify(data) !== '{}' && data) {
             const params = [];
             for (let key in data) {
                 params.push(`${key}=${data[key]}`)
@@ -15,7 +15,7 @@ export function request(url, data, options = {}) {
     })
 }
 
-request.get = function (url, data = {}, options = {}) {
+request.get = function (url, data, options = {}) {
     options.method = 'get';
     return request(url, data, options);
 }
