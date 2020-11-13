@@ -1,0 +1,110 @@
+@import "../../assets/vm.scss";
+@import "../../assets/base.css";
+
+.conductMain{
+    .conduct{
+        height: vm(28);
+        line-height: vm(28);
+        margin: vm(40) 0 vm(24) vm(16);
+        .see{
+            background: linear-gradient(180deg,#ff7223,#ffa723);
+            border-radius: 50%;
+            color: #fff;
+            font-size: vm(30);
+            margin-right: vm(10);
+            float: left;
+        }
+        span{
+            font-size: vm(18);
+            float: left;
+        }
+    }
+    .conduct_content{
+        height: vm(436);
+        margin-bottom: vm(64);
+        .conduct_img{
+            height: vm(247);
+            position: relative;
+            .conduct_imgsrc{
+                height: vm(247);
+                img{
+                    width: 100%;
+                    height: vm(247);
+                    border-radius: vm(20) vm(20) 0 0;
+                }
+            }
+            .conduct_imgsrc_title{
+                width:100%;
+                height: vm(247);
+                position: absolute;
+                top: 0;
+                padding: vm(20);
+                border-radius: vm(20) vm(20) 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: linear-gradient(180deg,transparent,#292525);
+                .order{
+                    color: #fff;
+                    font-weight: 900;
+                    p{
+                        height: vm(30);
+                        line-height: vm(30);
+                    }
+                    h2{
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+        .conduct_title{
+            background: #fff;
+            border-radius: 0 0 vm(20) vm(20);
+            height: vm(192);
+            .title{
+                height: vm(120);
+                overflow: hidden;
+                p{
+                    height: vm(72);
+                    margin: vm(24) vm(32);
+                    font-size: vm(15);
+                    line-height: vm(24);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .avatar_img{
+                height: vm(24);
+                text-align: center;
+                font-size: vm(15);
+                margin-bottom: vm(24);
+                display: flex;
+                justify-content: center;
+                .avatar{
+                    width: vm(16);
+                    height: vm(24);
+                    img{
+                        width: vm(24);
+                        height: vm(24);
+                        border-radius: 50%;
+                    }
+                }
+                span{
+                    margin-left: vm(16);
+                    line-height: vm(24);
+                }
+            }
+            .btn_big{
+                background:#292525;
+                color:#fff;
+                position:absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+}

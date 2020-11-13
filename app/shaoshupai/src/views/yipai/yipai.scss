@@ -23,13 +23,7 @@
         }
     }
     .ypNav{
-        button{
-            width: vm(78);
-            height: vm(36);
-            border: 0;
-            border-radius: vm(18);
-            margin-right: vm(20);
-        }
+        display: flex;
         .btnActive{
             background:#292525;
             color: #fff;
@@ -39,33 +33,4 @@
 .yqMain{
     width: 100%;
     padding: 0 vm(8);
-    .conductMain{
-        .conduct{
-            height: vm(28);
-            line-height: vm(28);
-            margin: vm(40) 0 vm(24) vm(16);
-            .see{
-                background: linear-gradient(180deg,#ff7223,#ffa723);
-                border-radius: 50%;
-                color: #fff;
-                font-size: vm(30);
-                margin-right: vm(10);
-                float: left;
-            }
-            span{
-                font-size: vm(18);
-                float: left;
-            }
-        }
-        .conduct_content{
-            height: vm(436);
-            .conduct_img{
-                padding: vm(20);
-                height: vm(247);
-                background: url("https://cdn.sspai.com/article/7fc80cdf-0f1e-f5eb-c7c1-1707615e9c83.jpg?imageMogr2/auto-orient/quality/95/thumbnail/!640x440r/gravity/Center/crop/640x440/interlace/1");
-                background-size: 100% 100%;
-                border-radius:vm(20) vm(20) 0 0;
-            }
-        }
-    }
 }

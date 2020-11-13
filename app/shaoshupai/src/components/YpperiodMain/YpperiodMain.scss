@@ -1,0 +1,113 @@
+@import "../../assets/vm.scss";
+@import "../../assets/base.css";
+
+
+.periodMain{
+    .period{
+        height: vm(28);
+        line-height: vm(28);
+        margin: vm(40) 0 vm(24) vm(16);
+        .ti{
+            width: vm(28);
+            height: vm(28);
+            line-height: vm(32);
+            text-align: center;
+            border-radius: 50%;
+            color: #fff;
+            font-size: vm(16);
+            margin-right: vm(10);
+            float: left;
+        }
+        span{
+            font-size: vm(18);
+            float: left;
+        }
+    }
+    ul{
+        .lists{
+            overflow: hidden;
+            margin-bottom: vm(24);
+            .lists_img{
+                height: vm(212);
+                position: relative;
+                .lists_imgsrc{
+                    width: 100%;
+                    height: vm(212);
+                    border-radius: vm(20);
+                    overflow: hidden;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        border-radius: vm(20);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                }
+                .lists_imgsrc_title{
+                        width: 100%;
+                        height: vm(212);
+                        padding: vm(20);
+                        border-radius: vm(20);
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        background: linear-gradient(180deg,transparent,#292525);
+                    .lists_order{
+                        color: #fff;
+                        font-weight: 900;
+                        p{
+                            height: vm(30);
+                            line-height: vm(30);
+                        }
+                        h2{
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+        }
+        .lists_avatar{
+            .lists_avatar_img{
+                height: vm(24);
+                text-align: center;
+                font-size: vm(15);
+                margin: vm(16) 0;
+                display: flex;
+                justify-content: center;
+                .avatar{
+                    width: vm(16);
+                    height: vm(24);
+                    img{
+                        width: vm(24);
+                        height: vm(24);
+                        border-radius: 50%;
+                    }
+                }
+                span{
+                    margin-left: vm(16);
+                    line-height: vm(24);
+                }
+            }
+        }
+    }
+    .loading{
+        height: vm(88);
+        position: relative;
+        .btn_big{
+            font-size: vm(14);
+            color: #666;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
