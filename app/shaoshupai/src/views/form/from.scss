@@ -1,0 +1,88 @@
+@import "@/assets/vm.scss";
+
+// 手机、密码公共样式：
+.phone {
+    border-radius: vm(6);
+    border: vm(1) solid #fff;
+    height: vm(60);
+    background: #F5F5F5;
+    transition: all .3s;
+    // overflow: hidden;
+
+    .area-box,
+    .number-box {
+        height: 100%;
+        float: left;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+// 手机号码
+.area-box {
+    width: 18%;
+    padding: vm(22) vm(0) vm(22) vm(10);
+    position: relative;
+}
+
+.number-box {
+    width: 82%;
+
+    input {
+        height: 100%;
+        padding-left: vm(12)
+    }
+}
+
+.area-select {
+    display: none;
+    min-width: vm(188);
+    height: vm(0);
+    transition: all .15s;
+    border: vm(2) solid #e4e7ed;
+    border-radius: vm(4);
+    background-color: #fff;
+    z-index: 2025;
+    position: absolute;
+    top: 238px;
+    left: 20px;
+
+    .area-select-box {
+        width: 100%;
+        height: 100%;
+        max-height: vm(274);
+        overflow: scroll;
+
+        ul {
+            padding: vm(6) vm(0);
+
+            li {
+                height: 34px;
+                line-height: 34px;
+                color: #292525;
+                padding: 0 vm(15);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: relative;
+            }
+        }
+    }
+}
+
+.logo {
+    padding: vm(36) vm(0);
+
+    div {
+        width: vm(133);
+        height: vm(47);
+        background: url(../../static/login/img/logo.png) no-repeat;
+        margin: 0 auto;
+        background-size: 100%;
+    }
+}
+
