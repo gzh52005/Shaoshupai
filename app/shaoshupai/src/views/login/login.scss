@@ -1,0 +1,262 @@
+@import "@/assets/vm.scss";
+
+#login {
+    padding: vm(57) vm(0);
+    background: #fff;
+}
+
+.form-box {
+    height: vm(200);
+    padding: 0 vm(20);
+    margin-bottom: vm(40);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    >div {
+        height: vm(60);
+        background: #F5F5F5;
+        transition: all .3s;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+    }
+
+    // 1、密码：
+    .password {
+        border-radius: vm(6);
+        border: vm(1) solid #fff;
+
+        >div {
+            height: 100%;
+            float: left;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+    .psw-box {
+        width: 65%;
+
+        input {
+            height: 100%;
+            padding-left: vm(16)
+        }
+    }
+
+    // 2、验证码
+    .verify {
+        border-radius: vm(6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .text-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                color: #4D4D4D;
+                position: absolute;
+                z-index: 10;
+            }
+
+            i {
+                display: none;
+                width: vm(22);
+                height: vm(22);
+                border-radius: 40%;
+                box-shadow: 0px 0px 24px #fff;
+                opacity: 0.9;
+                background: #fff;
+                position: absolute;
+                top: 20px;
+                left: 60px;
+                z-index: 15;
+            }
+        }
+
+        .drag-shade {
+            width: auto;
+            height: 100%;
+            position: absolute;
+            left: vm(0);
+
+            .pass-box {
+                width: vm(0);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #E5E5E5;
+                transition: all 0.5s;
+                float: left;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                opacity: 1;
+            }
+
+            .drag-right {
+                width: vm(60);
+                height: 100%;
+                background: #292525;
+                transition: all 0.5s;
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: 20;
+
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    // 3、滑块
+    .remember-box {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        padding-left: vm(4);
+
+        .remember {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                display: inline-block;
+                margin-left: vm(8);
+                color: #8e8787;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+// 忘记密码
+.forget {
+    padding: 0 vm(20);
+    overflow: hidden;
+
+    .forget-psw {
+        width: 50%;
+        float: left;
+        padding-top: vm(5);
+
+        span {
+            font-weight: 400;
+            font-size: vm(14);
+            letter-spacing: vm(2);
+            color: #655e5e;
+            margin-left: vm(10);
+        }
+    }
+
+    .regLogin {
+        width: 50%;
+        float: left;
+        text-align: right;
+
+        button {
+            height: vm(30);
+            letter-spacing: vm(2);
+            background: #f5f5f5;
+            color: #655e5e;
+            padding: vm(5) vm(12);
+            border-radius: vm(24);
+            border: none;
+        }
+
+        button+button {
+            color: #fd281a;
+            margin-left: vm(10);
+        }
+    }
+}
+
+.line {
+    width: calc(100% - vm(40));
+    margin: 0 auto;
+    height: vm(1);
+    background: #e5e5e5;
+    margin: vm(20) vm(0);
+}
+
+// 登录方式
+.login-mode {
+    color: #8e8787;
+
+    >p {
+        margin-top: 0;
+        margin-bottom: vm(10);
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    >div {
+        padding: vm(10) vm(20) vm(30);
+        text-align: center;
+
+        .login-icon {
+            width: vm(46);
+            height: vm(46);
+            cursor: pointer;
+            margin-right: vm(20);
+        }
+    }
+}
+
+// ——————————— 高亮和字体图标样式 —————————————
+// 向右的手指
+.right-icon {
+    margin-left: vm(6);
+    font-size: vm(22);
+    font-weight: 700;
+}
+
+
+// 记住密码
+.remember-icon {
+    width: vm(16);
+    height: vm(16);
+}
+
+// input聚焦高亮
+.focus-active {
+    background: #fff !important;
+    border: vm(1) solid #e5e5e5 !important;
+}
+
+// iconfont图标样式：
+.area-list-box {
+    position: absolute;
+    right: vm(0);
+    top: vm(20);
+    transition: all .3s;
+
+    .area-list {
+        width: vm(18);
+        height: vm(18);
+    }
+}
+
+.icon {
+    width: vm(100);
+    height: vm(100);
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
