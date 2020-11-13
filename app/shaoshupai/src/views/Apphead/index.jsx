@@ -1,5 +1,5 @@
 // 引入模块
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { NavBar, Button } from 'antd-mobile';
 import { SearchOutlined, MenuOutlined } from '@ant-design/icons';
@@ -22,24 +22,24 @@ function Apphead(props) {
         <header className={appheader}>
             <div className="appheader-box">
                 <NavBar
-                    style={{background:"transparent"}}
+                    style={{ background: "transparent" }}
                     leftContent={
                         <React.Fragment>
                             <img src={imgLogo}
-                            alt="" style={{ height: 24, }} onClick={() => { props.history.push('/home') }} />
+                                alt="" style={{ height: 24, }} onClick={() => { props.history.push('/home') }} />
                             {
-                                props.location.pathname === '/yipai'? <img src={yipaiLogo} style={{height:26,left:50}} /> : null
+                                props.location.pathname === '/yipai' ? <img src={yipaiLogo} style={{ height: 26, left: 50 }} /> : null
                             }
                             {
-                                props.location.pathname === '/matrix'?<CodeSandboxOutlined style={{color:"#000",fontSize: 24,marginLeft: 36}} /> : null
+                                props.location.pathname === '/matrix' ? <CodeSandboxOutlined style={{ color: "#000", fontSize: 24, marginLeft: 36 }} /> : null
                             }
-                            
+
                         </React.Fragment>
                     }
                     rightContent={
                         <div className="appheader-userbox">
-                            <SearchOutlined onClick={() => { findChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix'?{ marginRight: '20px', color:"#333"}:{ marginRight: '20px', color:"#fff"}} />
-                            <MenuOutlined onClick={() => { navChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix'?{ marginRight: '20px', color:"#333"}:{ marginRight: '20px', color:"#fff"}} />
+                            <SearchOutlined onClick={() => { findChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix' ? { marginRight: '20px', color: "#333" } : { marginRight: '20px', color: "#fff" }} />
+                            <MenuOutlined onClick={() => { navChange(!find && !nav) }} style={props.location.pathname === '/yipai' || props.location.pathname === '/matrix' ? { marginRight: '20px', color: "#333" } : { marginRight: '20px', color: "#fff" }} />
                             <Button
                                 size="small"
                                 style={{ float: 'right', borderRadius: "24px", padding: '5px 12px', background: '#f5f5f5', color: '#655e5e', fontSize: '14px', lineHeight: '20px' }}
@@ -53,7 +53,7 @@ function Apphead(props) {
                 {/* 搜索栏 */}
                 {find ? <SearchBox /> : null}
                 {/* 导航栏 */}
-                {nav ? <Navtion navState={{nav,navChange}} /> : null}
+                {nav ? <Navtion navState={{ nav, navChange }} /> : null}
 
             </div>
         </header >

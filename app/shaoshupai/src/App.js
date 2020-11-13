@@ -20,17 +20,15 @@ function App(props) {
       <Apphead />
 
       <div style={{ paddingBottom: '516px' }}>
-        <div>
-          <Switch>
-            <Route path='/home' component={Appbody} />
-            <Route path='/matrix' component={Matrix} />
-            <Route path='/yipai' component={Yipai} />
-            <Route path='/projectselection' component={ProjectSelection} />
-            <Route path='/notfound' component={() => <div>404</div>} />
-            <Redirect from='/' to='/home' exact />
-            <Redirect to='/notfound' />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path='/home' component={Appbody} />
+          <Route path='/matrix' component={Matrix} />
+          <Route path='/yipai' component={Yipai} />
+          <Route path='/projectselection' component={ProjectSelection} />
+          <Route path='/notfound' component={() => <div>404</div>} />
+          <Redirect from='/' to='/home' exact />
+          <Redirect to='/notfound' />
+        </Switch>
       </div>
     </div>
   );
