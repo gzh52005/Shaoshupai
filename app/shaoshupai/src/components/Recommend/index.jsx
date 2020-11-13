@@ -1,25 +1,25 @@
-import React,{useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Contentmain from "../Contentmain";
 import DateNewspaper from "../Datenewspaper";
 
 import request from "../../utils/request";
 
-function Recommend(){
-    let datalist = {};
-    let itemlist = {name:'test数据'}
+function Recommend() {
+    let [dataList, changeDataList] = useState([]);
+    let [itemList, changeitemList] = useState([]);
 
-    useEffect(function(){
-        request('/home/paging?page=1&pagesize=1').then(res => {
-            console.log(res)
-        })
-    },[])
+    useEffect(() => {
+        request.get('/home/paging?page=1&pagesize=1').then(res => {
+            changeDataList(dataList = res.data[0].recommend[0]);
+            changeitemList(itemList = res.data[0].recommend[1])
+        });
+    }, []);
 
-
-    return(
+    return (
         <React.Fragment>
-            <Contentmain datalist={datalist} />
-            <DateNewspaper itemlist={itemlist} />
+            <Contentmain dataList={dataList} />
+            <DateNewspaper itemList={itemList} />
         </React.Fragment>
     )
 }

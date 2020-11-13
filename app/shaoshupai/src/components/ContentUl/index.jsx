@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useCallback, useRef, useEffect } from "react";
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
 
@@ -6,25 +6,41 @@ import Recommend from "@/components/Recommend";
 
 import "./contentui.scss";
 
-function Contentul() {
-    const ulRef = useRef();
-    useEffect(() => {
-        // console.log(ulRef.current.layout);
-        ulRef.current.layout.style.backgroundColor = '#f4f4f4';
-        window.addEventListener('scroll', () => {
-            // console.log(parseInt(window.pageYOffset))
-            if (parseInt(window.pageYOffset) > 276) {
-                ulRef.current.layout.style.position = 'fixed';
-                ulRef.current.layout.style.top = 50 + 'px';
-            } else {
-                ulRef.current.layout.style.position = 'relative';
-                ulRef.current.layout.style.top = 0;
-            }
 
-        })
-    }, [ulRef]);
+function Contentul(props) {
 
-    
+    // let fn = function (props, ulRef) {
+    //     if (props.location.pathname == '/home') {
+    //         if (parseInt(window.pageYOffset) > 276) {
+    //             ulRef.current.layout.style.position = 'fixed';
+    //             ulRef.current.layout.style.top = 50 + 'px';
+    //         } else {
+    //             ulRef.current.layout.style.position = 'relative';
+    //             ulRef.current.layout.style.top = 0;
+    //         }
+    //     }
+    // }
+
+    // let ulRef = useRef();
+    // useEffect(() => {
+    //     if (ulRef.current != null) {
+    //         console.log(1111);
+    //         ulRef.current.layout.style.backgroundColor = '#f4f4f4';
+    //         window.addEventListener('scroll', () => {
+    //             fn(props, ulRef)
+    //         })
+
+    //         return () => {
+    //             // window.removeEventListener('scroll',fn)
+    //             console.log(ulRef);
+    //             console.log(123)// ulRef.current.layout = null
+    //         }
+    //     }
+    // }, []);
+
+
+
+
 
     let renderContent = liList =>
         (<div style={{ padding: ' 20px 12px', minHeight: 150, backgroundColor: '#f4f4f4' }}>
@@ -65,7 +81,7 @@ function Contentul() {
     return (
         <div>
             <WhiteSpace />
-            <Tabs tabs={liList} renderTabBar={props => <Tabs.DefaultTabBar ref={ulRef} {...props} page={4} tabBarUnderlineStyle={{ border: '1px solid #d71a1b' }} tabBarBackgroundColor="#f4f4f4"  tabBarActiveTextColor='#d71a1b' />}>
+            <Tabs tabs={liList} renderTabBar={props => <Tabs.DefaultTabBar  {...props} page={4} tabBarUnderlineStyle={{ border: '1px solid #d71a1b' }} tabBarBackgroundColor="#f4f4f4" tabBarActiveTextColor='#d71a1b' />}>
                 {renderContent}
             </Tabs>
             <WhiteSpace />

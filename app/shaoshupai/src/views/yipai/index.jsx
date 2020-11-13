@@ -18,6 +18,9 @@ function Yipai(props){
 
     let [btn1,changeBtn1] = useState(true)
     let [btn2,changeBtn2] = useState(false)
+    console.log(props,'000000000');
+
+    // removeEventListener('scroll')
 
     return( 
         <div className="yipai">
