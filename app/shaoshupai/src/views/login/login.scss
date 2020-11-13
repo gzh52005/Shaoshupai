@@ -25,27 +25,27 @@
     }
 
     // 1、密码：
-    .password {
-        border-radius: vm(6);
-        border: vm(1) solid #fff;
+    // .password {
+    //     border-radius: vm(6);
+    //     border: vm(1) solid #fff;
 
-        >div {
-            height: 100%;
-            float: left;
-        }
+    //     >div {
+    //         height: 100%;
+    //         float: left;
+    //     }
 
-        input {
-            width: 100%;
-        }
-    }
-    .psw-box {
-        width: 65%;
+    //     input {
+    //         width: 100%;
+    //     }
+    // }
+    // .psw-box {
+    //     width: 65%;
 
-        input {
-            height: 100%;
-            padding-left: vm(16)
-        }
-    }
+    //     input {
+    //         height: 100%;
+    //         padding-left: vm(16)
+    //     }
+    // }
 
     // 2、验证码
     .verify {
@@ -69,15 +69,15 @@
 
             i {
                 display: none;
-                width: vm(22);
+                width: vm(30);
                 height: vm(22);
                 border-radius: 40%;
-                box-shadow: 0px 0px 24px #fff;
+                box-shadow: vm(0) vm(0) vm(30) #fff;
                 opacity: 0.9;
                 background: #fff;
                 position: absolute;
-                top: 20px;
-                left: 60px;
+                top: vm(20);
+                left: vm(60);
                 z-index: 15;
             }
         }
@@ -123,68 +123,12 @@
             }
         }
     }
-
-    // 3、滑块
-    .remember-box {
-        width: 35%;
-        display: flex;
-        align-items: center;
-        padding-left: vm(4);
-
-        .remember {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            span {
-                display: inline-block;
-                margin-left: vm(8);
-                color: #8e8787;
-                transition: all .3s;
-            }
-        }
-    }
 }
 
-// 忘记密码
+// 忘记密码盒子
 .forget {
     padding: 0 vm(20);
     overflow: hidden;
-
-    .forget-psw {
-        width: 50%;
-        float: left;
-        padding-top: vm(5);
-
-        span {
-            font-weight: 400;
-            font-size: vm(14);
-            letter-spacing: vm(2);
-            color: #655e5e;
-            margin-left: vm(10);
-        }
-    }
-
-    .regLogin {
-        width: 50%;
-        float: left;
-        text-align: right;
-
-        button {
-            height: vm(30);
-            letter-spacing: vm(2);
-            background: #f5f5f5;
-            color: #655e5e;
-            padding: vm(5) vm(12);
-            border-radius: vm(24);
-            border: none;
-        }
-
-        button+button {
-            color: #fd281a;
-            margin-left: vm(10);
-        }
-    }
 }
 
 .line {
@@ -193,6 +137,12 @@
     height: vm(1);
     background: #e5e5e5;
     margin: vm(20) vm(0);
+}
+
+.regLogin {
+    width: 50%;
+    float: right;
+    text-align: right;
 }
 
 // 登录方式

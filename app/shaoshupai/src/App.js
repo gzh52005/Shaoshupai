@@ -9,6 +9,8 @@ import Yipai from './views/yipai/index.jsx';
 import ProjectSelection from './views/projectSelection/index.jsx';
 import Login from './views/login/';
 import Reg from './views/reg/';
+import ForgetPhone from "./views/forgetPsw/forgetPhone.js";
+import ForgerEmail from "./views/forgetPsw/forgetEmail.js"
 
 // 添加样式
 import 'antd-mobile/dist/antd-mobile.css';
@@ -19,7 +21,7 @@ function App(props) {
     <div className="App">
 
       {
-        props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' || props.location.pathname === '/login' || props.location.pathname === '/reg' ? null : <Apphead />
+        props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' || props.location.pathname === '/login' || props.location.pathname === '/reg' || props.location.pathname === '/forget/phone' || props.location.pathname === '/forget/email' ? null : <Apphead />
       }
 
       <div>
@@ -30,6 +32,8 @@ function App(props) {
             <Route path='/projectselection' component={ProjectSelection} />
             <Route path='/login' component={Login}/>
             <Route path='/reg' component={Reg}/>
+            <Route path='/forget/phone' component={ForgetPhone}/>
+            <Route path='/forget/email' component={ForgerEmail}/>
             <Route path='/notfound' component={() => <div>404</div>} />
             <Redirect from='/' to='/home' exact />
             <Redirect to='/notfound' />

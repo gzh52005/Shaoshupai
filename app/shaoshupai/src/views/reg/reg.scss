@@ -1,0 +1,70 @@
+@import "@/assets/vm.scss";
+
+#reg {
+    background: #ffffff;
+    padding: vm(5) vm(0);
+}
+
+#mian {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.form-reg {
+    min-height: vm(330);
+    padding: vm(0) vm(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// 选择协议
+.checkbox {
+    width: 100%;
+    color: #8e8787;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: vm(14);
+    cursor: pointer;
+    position: relative;
+    padding: vm(0) vm(20) vm(20) vm(20);
+
+    .remember {
+        display: flex;
+        align-items: center;
+
+        .remember-icon {
+            margin: vm(10) vm(10) vm(0) vm(2);
+        }
+
+        span {
+            margin-top: vm(10);
+        }
+    }
+}
+
+
+// 按钮区域
+.btn-area {
+    padding: vm(0) vm(20) vm(20) vm(20);
+    overflow: hidden;
+
+    article {
+        width: 50%;
+        text-align: right;
+        float: left;
+    }
+}
+
+
+// 底部消息
+.message {
+    padding: vm(0) vm(20) vm(30) vm(20);
+    font-weight: 400;
+    font-size: vm(14);
+    line-height: normal;
+    letter-spacing: vm(1.5);
+    color: #8e8787;
+}

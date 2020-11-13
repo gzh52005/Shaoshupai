@@ -1,0 +1,32 @@
+@import "@/assets/vm.scss";
+
+#forgetPhone {
+    min-height: 100%;
+    background: #ffffff;
+    padding: vm(80) vm(20);
+}
+
+.forgetPhone-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.forgetPhone-form {
+    min-height: vm(265);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: vm(18);
+}
+
+.find-psw {
+    overflow: hidden;
+    padding-bottom: vm(20);
+}
+
+.confirm-psw {
+    padding-bottom: vm(35);
+    text-align: right;
+}

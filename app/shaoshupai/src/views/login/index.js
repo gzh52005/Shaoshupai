@@ -1,33 +1,9 @@
 import React,{useCallback,useRef,useEffect,useState} from "react";
-import {PhoneNumber,Logo} from "../form";
+import {PhoneNumber,Logo,ForgetPassword,Button,PassWord} from "../form";
 
 import "./login.scss";
 
 function Login(props){
-    let active = true;
-
-    // 聚焦高亮
-    const focusActive = useCallback((e)=>{
-        e.target.parentNode.parentNode.classList.add("focus-active");
-    })
-    const blurActive = useCallback((e)=>{
-        e.target.parentNode.parentNode.classList.remove("focus-active");
-    })
-
-    // 记住密码
-    let remIcon = useRef(null);
-    let remPsw = useRef(null);
-    const rememberPassword = useCallback(()=>{
-        if(active){
-            remIcon.current.setAttribute("xlink:href","#icon-dagou");
-            remPsw.current.style.color = "#292525";
-        }else {
-            remIcon.current.setAttribute("xlink:href","#icon-yuan1");
-            remPsw.current.style.color = "#8e8787";
-        }
-        active = !active;
-    })
-
     // 滑块
     let dim = useRef(null);
     const move = useCallback(function(node, obj, callback, speed){
@@ -128,19 +104,7 @@ function Login(props){
         <Logo props={props}/>
         <article className="form-box">
             <PhoneNumber />
-            <div className="password">
-                <div className="psw-box">
-                    <input onFocus={focusActive} onBlur={blurActive} type="password" placeholder="密码" />
-                </div>
-                <div className="remember-box">
-                    <div className="remember" onClick={rememberPassword}>
-                        <svg aria-hidden="true" className="remember-icon">
-                            <use className="transit-icon" ref={remIcon} xlinkHref="#icon-yuan1"></use>
-                        </svg>
-                        <span ref={remPsw}>记住密码</span>
-                    </div>
-                </div>
-            </div>
+            <PassWord props={props} placeholder={"密码"}/>
             <div className="verify" ref={verify}>
                 <div className="text-box">
                     <div style={{width:180,height:22}}>
@@ -160,9 +124,10 @@ function Login(props){
             </div>
         </article>
         <article className="forget">
-            <div className="forget-psw"><span>忘记密码？</span></div>
+            <ForgetPassword style={{marginLeft: 10}}>忘记密码？</ForgetPassword>
             <div className="regLogin">
-                <button>注册</button><button>登录</button>
+                <Button>注册</Button>
+                <Button style={{marginLeft:10}} className={"active"}>登录</Button>
             </div>
         </article>
         <article className="line"></article>
@@ -186,7 +151,6 @@ function Login(props){
                 </a>
             </div>
         </article>
-        
     </div>)
 }
 
