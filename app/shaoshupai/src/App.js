@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Redirect, Switch, Route, withRouter } from 'react-router-dom';
 
 // 组件添加区
@@ -10,11 +10,24 @@ import ProjectSelection from './views/projectSelection/index.jsx';
 import Login from './views/login/';
 import Reg from './views/reg/';
 
-// 添加样式
+import YpDetail from './views/YpDetail'
+
 import 'antd-mobile/dist/antd-mobile.css';
 import './App.scss';
 
 function App(props) {
+
+  useEffect(() => {
+    if (document) {
+      if (document.documentElement || document.body) {
+        document.documentElement.scrollTop = document.body.scrollTop = 0;
+      }
+      if (document.getElementsByClassName('App')[0]) {
+        document.getElementsByClassName('App')[0].scrollTop = 0;
+      }
+    }
+  }, [props.history.location.pathname]);
+
   return (
     <div className="App">
 
@@ -22,11 +35,11 @@ function App(props) {
         props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' || props.location.pathname === '/login' || props.location.pathname === '/reg' ? null : <Apphead />
       }
 
-      <div>
           <Switch>
             <Route path='/home' component={Appbody} />
             <Route path='/matrix' component={Matrix} />
             <Route path='/yipai' component={Yipai} />
+            <Route path='/ypdetail' component={YpDetail} />
             <Route path='/projectselection' component={ProjectSelection} />
             <Route path='/login' component={Login}/>
             <Route path='/reg' component={Reg}/>
@@ -34,7 +47,6 @@ function App(props) {
             <Redirect from='/' to='/home' exact />
             <Redirect to='/notfound' />
           </Switch>
-      </div>
     </div>
   );
 }

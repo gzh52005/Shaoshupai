@@ -1,0 +1,45 @@
+@import "@/assets/vm.scss";
+@import "@/assets/base.css";
+
+.AppFoot{
+    width: 100%;
+    height: vm(514);
+    background: #fff;
+    padding: 0 vm(12);
+    .AppContent{
+        width: vm(215);
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .AppLogo{
+            text-align: center;
+            img{
+                height: vm(42);
+            }
+        }
+        .AppIcon{
+            font-size: vm(20);
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .AppNav{
+            padding: 0 vm(13);
+            height: vm(236);
+            display: flex;
+            flex-wrap:wrap;
+            li{
+                width: vm(92);
+                font-size: vm(14);
+                line-height: vm(60);
+                text-align: center;
+            }
+        }
+        .footer-txt{
+            text-align: center;
+            font-size: vm(10);
+            color: #666;
+        }
+    }
+}
