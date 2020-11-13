@@ -21,7 +21,7 @@ function App(props) {
     <div className="App">
 
       {
-        props.location.pathname === '/yipai' || props.location.pathname === '/projectselection' || props.location.pathname === '/login' || props.location.pathname === '/reg' || props.location.pathname === '/forget/phone' || props.location.pathname === '/forget/email' ? null : <Apphead />
+        props.location.pathname === '/login' || props.location.pathname === '/reg' || props.location.pathname === '/forget/phone' || props.location.pathname === '/forget/email' ? null : <Apphead />
       }
 
       <div>
