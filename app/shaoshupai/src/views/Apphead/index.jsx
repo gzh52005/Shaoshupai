@@ -16,7 +16,7 @@ function Apphead(props) {
     const [nav, navChange] = useState(false);
     const [find, findChange] = useState(false);
 
-    const appheader = props.location.pathname === '/yipai' || props.location.pathname === '/matrix' || props.location.pathname === "/ypdetail" ? true : false;
+    const appheader = props.location.pathname === '/yipai' || props.location.pathname === '/matrix/matrixSquare' || props.location.pathname === "/ypdetail" || props.location.pathname === "/matrix/matrixColumn" || props.location.pathname === "/matrix/matrixYipai" ? true : false;
 
     return (
         <header className={appheader?"appheader_white" : "appheader"}>
@@ -31,7 +31,7 @@ function Apphead(props) {
                                 props.location.pathname === '/yipai' || props.location.pathname === "/ypdetail" ? <img src={yipaiLogo} style={{height:26,left:50}} /> : null
                             }
                             {
-                                props.location.pathname === '/matrix' ? <CodeSandboxOutlined style={{ color: "#000", fontSize: 24, marginLeft: 36 }} /> : null
+                                props.location.pathname === '/matrix/matrixSquare' || props.location.pathname === "/matrix/matrixColumn" || props.location.pathname === "/matrix/matrixYipai" ? <CodeSandboxOutlined style={{ color: "#000", fontSize: 24, marginLeft: 36 }} /> : null
                             }
 
                         </React.Fragment>

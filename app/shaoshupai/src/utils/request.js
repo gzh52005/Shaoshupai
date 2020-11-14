@@ -1,6 +1,6 @@
 export function request(url, data, options = {}) {
     if (options.method === 'get' || options.method === undefined) {
-        if (data) {
+        if (JSON.stringify(data)=="{}" || data) {
             const params = [];
             for (let key in data) {
                 params.push(`${key}=${data[key]}`)

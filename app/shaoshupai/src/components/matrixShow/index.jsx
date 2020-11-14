@@ -2,36 +2,39 @@ import React from "react";
 import "./matrixShow.scss";
 import { ThunderboltOutlined,MessageOutlined } from "@ant-design/icons";
 
-function MatrixShow (){
+function MatrixShow (props){
+    console.log(props,777);
+    let {state} = props;
+    
     return (
         <li className="bigbox">
             <div className="box">
                 <div className="left">
                     <p className="left_title">
-                    《边境》封测体验报告：新奇、拟真的太空题材 FPS
+                    {state.title}
                     </p>
                     <div className="author">
                         <div className="author_top">
                             <div className="imgbox">
-                                <img src="https://cdn.sspai.com/2020/10/12/ff226c5229223b9d7b3db24982defc44.png" alt=""/>
+                                <img src={`https://cdn.sspai.com/${state.author.avatar}`} alt=""/>
                             </div>
-                            <p className="author_name">板斧</p>
+                            <p className="author_name">{state.author.nickname}</p>
                         </div>
                         <div className="author_bottom">
                             <div className="author_bottom_item">
                                 <ThunderboltOutlined/>
-                                123
+                                {state.like_count}
                             </div>
                             <div className="author_bottom_item">
                                 <MessageOutlined/>
-                                12
+                                {state.comment_count}
                             </div>
                             <div className="author_bottom_item">1天前</div>
                         </div>
                     </div>
                 </div>
                 <div className="right">
-                    <img src="https://cdn.sspai.com/2019/11/14/5e970b7834fd522df7520bb00ea9a362.gif?imageMogr2/auto-orient/quality/95/thumbnail/!48x48r/gravity/Center/crop/48x48/interlace/1" alt=""/>
+                    <img src={`https://cdn.sspai.com/${state.banner}`} alt=""/>
                 </div>
             </div>
         </li>
