@@ -30,7 +30,7 @@
                 flex-direction:column;
                 justify-content:space-between;
                 .author_top{
-                    width:vm(70);
+                    width:vm(150);
                     height:vm(22);
                     display:flex;
                     align-items:center;
@@ -38,6 +38,7 @@
                         width:vm(22);
                         height:vm(22);
                         margin-right:vm(15);
+                        flex-shrink:0;
                         img{
                             width:100%;
                             height:100%;

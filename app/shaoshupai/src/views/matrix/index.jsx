@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Redirect, Switch, Route, withRouter } from 'react-router-dom';
 import {RadarChartOutlined} from "@ant-design/icons";
 import "./matrix.scss";
 import MatriSquare from "../matrixSquare/index";
 import MatrixColumn from "../matrixColumn/index";
 import MatrixYipai from "../matrixYipai/index";
+
 function Matrix(props) {
     console.log(props, 888)
-    let [current, changenav] = useState(0);
+    // const pathName = props.location.pathname
     let navlist = [
         {
             id: 1,
@@ -41,9 +42,8 @@ function Matrix(props) {
                 </div>
                 <ul className="bottom">
                     {
-                        navlist.map((item, index) => <li className={current == index ? "active" : ""} onClick={() => {
+                        navlist.map((item) => <li className={props.location.pathname == item.path ? "active" : ""} onClick={() => {
                             props.history.push(item.path)
-                            changenav(current = index)
                         }} key={item.id}>{item.text}</li>)
 
                     }

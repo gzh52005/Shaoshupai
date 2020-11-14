@@ -108,7 +108,7 @@
         // 值得关注
         .yipai_focus{
             width:100%;
-            height:vm(391);
+            min-height:vm(300);
             background:#f7f7f8;
             margin-top:vm(28);
             border-radius:vm(16);
@@ -153,6 +153,7 @@
             height:vm(363);
             background:#f7f7f8;
             margin-top:vm(28);
+            margin-bottom:vm(40);
             border-radius:vm(16);
             padding: 24px 28px 28px;
             h2{

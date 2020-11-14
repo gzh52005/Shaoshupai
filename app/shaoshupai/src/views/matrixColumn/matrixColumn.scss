@@ -1,0 +1,60 @@
+@import "../../assets/vm.scss";
+
+
+.columnBox{
+    width:100%;
+    padding:0 vm(16);
+    margin-bottom:vm(100);
+    .columnCase{
+        width:100%;
+        height:vm(87);
+        border-bottom:vm(1) solid #e5e5e5;
+        .columnCase_img{
+            width:vm(54);
+            height:vm(54);
+            border-radius:vm(8);
+            background:url("https://cdn.sspai.com/other/136_1489399671084.jpg?imageMogr2/auto-orient/quality/95/thumbnail/!96x96r/gravity/Center/crop/96x96/interlace/1");
+            background-size: contain;
+            background-position: 50%;
+            float:left;
+            margin-top:vm(16);
+            margin-right:vm(16);
+        }
+        .columnCase_text{
+            width:vm(223);
+            height:vm(44);
+            float:left;
+            display:flex;
+            flex-direction: column;
+            margin-top:vm(24);
+            i{
+                font-size:vm(14);
+                color:#292525;
+            }
+            i:nth-child(1){
+                margin-bottom:vm(10);
+            }
+        }
+        .anticon-right{
+            margin-right:vm(4);
+            float:right;
+            font-size:vm(18);
+            margin-top:vm(32);
+        }
+    }
+}
+.more{
+    color: #655e5e;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    width: 136px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40px;
+    background: #f7f7f8;
+    margin: 36px auto;
+    // -webkit-transition: color .2s;
+    // transition: color .2s;
+}
