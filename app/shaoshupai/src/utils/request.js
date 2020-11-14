@@ -15,7 +15,7 @@ export function request(url, data, options = {}) {
     })
 }
 
-request.get = function (url, data, options = {}) {
+request.get = function (url, data = {}, options = {}) {
     options.method = 'get';
     return request(url, data, options);
 }

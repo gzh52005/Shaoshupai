@@ -3,12 +3,15 @@ import { Tabs, WhiteSpace } from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
 
 import Recommend from "@/components/Recommend";
+import Hot from "@/components/Hot";
+import Application from "@/components/Application";
+import Life from "@/components/Life";
+import Efficiency from "@/components/Efficiency";
 
 import "./contentui.scss";
 
 
 function Contentul(props) {
-
     // let fn = function (props, ulRef) {
     //     if (props.location.pathname == '/home') {
     //         if (parseInt(window.pageYOffset) > 276) {
@@ -58,23 +61,23 @@ function Contentul(props) {
             id: 2,
             title: '最热',
             path: '/hot',
-            component: <Recommend />
+            component: <Hot />
         }
         , {
             id: 3,
             title: '应用推荐',
             path: '/application',
-            component: <Recommend />
+            component: <Application />
         }, {
             id: 4,
             title: '生活方式',
             path: '/life',
-            component: <Recommend />
+            component: <Life />
         }, {
             id: 5,
             title: '效率技巧',
             path: '/efficiency',
-            component: <Recommend />
+            component: <Efficiency />
         }
     ]
 
