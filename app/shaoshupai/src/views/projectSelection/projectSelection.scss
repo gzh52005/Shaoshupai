@@ -1,0 +1,51 @@
+@import "../../assets/vm.scss";
+
+.projectselection-box{
+    position: relative;
+    top: vm(50);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .topics-header{
+        font-size: vm(20);
+        line-height: vm(28);
+        padding: vm(32);
+        margin-bottom: vm(-8);
+        background: #ffffff;
+        text-align: center;
+    }
+    .topics-content{
+        padding: 0 vm(16);
+        max-width: vm(1140);
+        margin: auto;
+        .topics-navtion{
+            display: flex;
+            align-items: flex-start;
+            background: #fff;
+            margin: 0 vm(-16) vm(16);
+            padding: 0 vm(16);
+            .topics-navtion-item+.topics-navtion-item{
+                margin-left: vm(8);
+            }
+            .topics-navtion-item{
+                border-bottom: 2px solid transparent;
+                transition: all .2s ease-out;
+                font-size: vm(15);
+                line-height: vm(21);
+                padding: vm(8);
+                font-weight: 500;
+            }
+            .current-topics-navtion-item{
+                color: #fd281a;
+                border-color: #fd281a;
+                
+            }
+        }
+        .topics-content-main{
+            margin-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+    }
+}

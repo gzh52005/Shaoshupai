@@ -1,0 +1,33 @@
+@import "../../assets/vm.scss";
+
+.topics-content-main-item{
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: vm(8);
+    .main-link-item{
+        font-size: vm(14);
+        line-height: vm(20);
+        background: #fff;
+        .topic-cover{
+            display: block;
+            width: 100%;
+            padding-top: 53.76%;
+            
+        }
+        .topic-info{
+            padding: vm(16) vm(20);
+            display: flex;
+            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            .topic-title{
+                color: #292525;
+                font-weight: 500;
+                margin-bottom: vm(4);
+            }
+            .topic-count{
+                color: #8e8787;
+            }
+        }
+    }
+}
