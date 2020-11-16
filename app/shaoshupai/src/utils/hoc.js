@@ -20,15 +20,15 @@ export function withStorages(...key) {
 
 // 路由守卫
 export function withAuth(InnerComponent) {
-    @withStorages('currentUser')
+    @withStorages('userState')
     class OuterComponent extends React.Component {
         async componentDidMount() {
-            let { currentUser } = this.props;
-            currentUser = JSON.parse(currentUser)
+            let { userState } = this.props;
+            userState = JSON.parse(userState)
             // 校验token
-            if (currentUser) {
+            if (userState) {
                 const data = await request.get('/user/verify', {}, {
-                    header: { token: currentUser.token }
+                    header: { token: userState.token }
                 });
                 if (data.flag) {
                     Toast.fail('免登录已过期，请重新登录', 1);
@@ -40,8 +40,8 @@ export function withAuth(InnerComponent) {
             }
         }
         render() {
-            const { currentUser } = this.props;
-            if (currentUser) {
+            const { userState } = this.props;
+            if (userState) {
                 return <InnerComponent {...this.props} />
             }
             return <Redirect to={"/login?redirectTo=" + this.props.location.pathname} />
