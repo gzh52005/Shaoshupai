@@ -6,7 +6,7 @@ function YpButton(props){
     
     return (
         <div>
-            <button className={props.className} style={props.style} onClick={props.onClick}>{props.children}</button>
+            <button className={props.className} style={props.style} onClick={props.onClick} disabled={props.disabled}>{props.children}</button>
         </div>
     )
 }

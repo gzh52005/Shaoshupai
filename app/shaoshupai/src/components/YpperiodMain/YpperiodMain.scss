@@ -96,18 +96,4 @@
             }
         }
     }
-    .loading{
-        height: vm(88);
-        position: relative;
-        .btn_big{
-            font-size: vm(14);
-            color: #666;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-        }
-    }
 }
