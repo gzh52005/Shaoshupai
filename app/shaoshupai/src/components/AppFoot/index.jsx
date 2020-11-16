@@ -27,7 +27,7 @@ function AppFoot(props){
     
     // props = props.value;
 
-    const bgcolor = props.location.pathname == "/yipai" || props.location.pathname === '/matrix/matrixSquare' || props.location.pathname === "/matrix/matrixColumn" || props.location.pathname === "/matrix/matrixYipai" ? true : false
+    const bgcolor = props.location.pathname == "/yipai" || props.location.pathname === '/matrix/matrixSquare' || props.location.pathname === "/matrix/matrixColumn" || props.location.pathname === "/matrix/matrixYipai" ||  props.location.pathname == "/ypdetail" ? true : false
 
     return (
         <div className="AppFoot" style={bgcolor?{background:"#fff"}:{background:"#292525",color:'#fff'}}>
