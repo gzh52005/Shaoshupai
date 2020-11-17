@@ -4,6 +4,7 @@ import { Redirect, Switch, Route, withRouter } from 'react-router-dom';
 // 组件添加区
 import Apphead from './views/Apphead/index.jsx';
 import Appbody from './views/Appbody/index.jsx';
+import Appdetails from './views/Appdetails';
 import Matrix from './views/matrix/index.jsx';
 import Yipai from './views/yipai/index.jsx';
 import ProjectSelection from './views/projectSelection/index.jsx';
@@ -43,6 +44,7 @@ function App(props) {
             <Route path='/yipai' component={Yipai} />
             <Route path='/ypdetail' component={YpDetail} />
             <Route path='/projectselection' component={ProjectSelection} />
+            <Route path='/appdetails' component={Appdetails} />
             <Route path='/login' component={Login}/>
             <Route path='/reg' component={Reg}/>
             <Route path='/forget/phone' component={ForgetPhone}/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import request from '../../utils/request';
 import { Carousel, WingBlank } from 'antd-mobile';
 
@@ -52,7 +53,7 @@ class Slideshow extends React.Component {
     }
 }
 
-
+Slideshow = withRouter(Slideshow)
 export default Slideshow;
 
 /*
