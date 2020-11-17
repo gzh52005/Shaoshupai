@@ -1,14 +1,14 @@
 import React from 'react';
+import {withRouter} from "react-router-dom";
 
 import "./contentmain.scss";
 
 function Contentmain(props) {
-    // console.log(props.dataList);
     return (
         <div className="content-main-box">
             <div className="content-main-text">
                 <div className="content-main-imgBox">
-                    <a style={{ display: "inline-block", width: '100%' }}>
+                    <a onClick={()=>{props.history.push('/appdetails')}} style={{ display: "inline-block", width: '100%' }}>
                         <div className="card_img" style={{ background: `linear-gradient(180deg,transparent,#000),url('${props.dataList.banner}')`, backgroundSize: '100%' }}></div>
                     </a>
                 </div>
@@ -33,4 +33,6 @@ function Contentmain(props) {
     )
 }
 
+
+Contentmain = withRouter(Contentmain)
 export default Contentmain;
